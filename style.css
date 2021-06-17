@@ -1,0 +1,71 @@
+/* Import Police */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #370617;
+}
+
+.btn {
+    position: absolute; 
+    top: 40%;
+    left: 50%;
+   transform: translate(-50%, -50%);
+   width: 215px;
+   height: 75px;
+   font-size: 20px; 
+   outline: none; 
+   border: none;
+   border-radius: 3px;
+   will-change: transform;
+   cursor: pointer;
+   font-family: 'Montserrat', sans-serif;
+   transition: backgroundColor 0.2s ease;
+}
+
+.btn:hover {
+    background: #ffffff;
+}
+
+.btn span {
+    font-size: 30px;
+}
+
+.container-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+}
+
+.loader {
+    border: 2px solid #dee2e6;
+    border-top: 2px solid #343a40;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg)}
+}
+
+
+/* EXPLICATIONS SUPPLEMENTAIRES */
+/* Bouton sera placé au milieu de la page */
+/* Outline = contour */
+/* La propriété will-change fournit une indication au navigateur sur la propension 
+d'un élément à changer (afin que le navigateur puisse mettre en place les 
+optimisations nécessaires avant que l'élément change vraiment).
+ Ce type d'optimisation permet d'augmenter la réactivité de la page en effectuant 
+ des calculs (éventuellement coûteux) en prévision du changement. */
+ /* La fonction scale() permet de modifier la taille d'un élément avec un facteur d'échelle 
+ sur deux dimensions.  */
